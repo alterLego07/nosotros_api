@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "8f1badee-b016-4ab1-9b26-8c10f072ee00",
+		"name": "NOSOTROS_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24905369"
+	},
+	"item": [
+		{
+			"name": "Create Boards",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\" : \"Ejemplo 4\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/boards/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"boards",
+						""
+					]
+				},
+				"description": "Creamos un nuevo registro al tablero"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Boards",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/boards/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"boards",
+						""
+					]
+				},
+				"description": "Obtenemos todos los registros de los tableros"
+			},
+			"response": []
+		},
+		{
+			"name": "Get ID board",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/boards/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"boards",
+						"1"
+					]
+				},
+				"description": "Obtiene el tablero dado por un ID  "
+			},
+			"response": []
+		},
+		{
+			"name": "Update Kanba",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\" : \"Actualizado 1\",\r\n   \"stage\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/boards/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"boards",
+						"1"
+					]
+				},
+				"description": "Actualizamos un tablero existente"
+			},
+			"response": []
+		}
+	]
+}
